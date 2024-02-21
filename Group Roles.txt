@@ -1,0 +1,59 @@
+ECS171 GROUP 15
+Group Roles
+
+Main Task:
+(Week 7)
+1. Getting the primitive Data Ready to Use
+    a. Dataset Selection
+    b. Data Preprocessing
+(Week 7, 8 - 9)
+2. Building and Testing the model
+    a. Choose a applicable model(SVM, NN,...)
+    b. Testing the model(MSE, SSE, weights adjustments)
+    c. Optimizing the model(hyperparameter tuning, etc)
+    d. Anything related to building and running a model
+(Week 8 - 10)
+3. Visualizing and Finalizing the model
+    a. Refer to Piazza/learn from online
+    b. Concise and Beautiful look of our output data
+    c. Anything related to visualization(UI/UX)
+
+Side Task(Refer to Syllabus for Requirements):
+4. Road-map
+5. Report
+6. Presentation
+
+Tiffany
+    1. Getting the primitive Data Ready to Use
+    4. Road-map
+    5. Report
+    6. Presentation
+
+Jonathan/Kate
+    2. Building and Testing the model
+    5. Report
+    6. Presentation
+
+Ethan
+    3. Visualizing and Finalizing the model
+    5. Report
+    6. Presentation
+
+To Access GitHub and Work Together:
+1. Clone the Repository
+    git clone https://github.com/JonathanH517/ECS171-GROUP-PROJECT.git
+
+2. Create a New Branch
+    git checkout -b <branch-name>
+
+3. Do your role and make changes
+
+4. Stage All Changes: To stage all changes you've made, use:
+    git add .
+
+5. Commit Your Changes
+    git commit -m "<commit-message>"
+    example: git commit -m "Committed by Jonathan on 2/21/2024, 3rd Version"
+
+6. Push Your Changes
+    git push origin <branch-name>
