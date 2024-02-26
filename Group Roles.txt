@@ -6,13 +6,13 @@ Main Task:
 1. Getting the primitive Data Ready to Use
     a. Dataset Selection
     b. Data Preprocessing
-(Week 7, 8 - 9)
+(Week 7, 8 - 9, 3/2-3/5)
 2. Building and Testing the model
     a. Choose a applicable model(SVM, NN,...)
     b. Testing the model(MSE, SSE, weights adjustments)
     c. Optimizing the model(hyperparameter tuning, etc)
     d. Anything related to building and running a model
-(Week 8 - 10)
+(Week 8 - 9 weekend 3/9-3/10)
 3. Visualizing and Finalizing the model
     a. Refer to Piazza/learn from online
     b. Concise and Beautiful look of our output data
@@ -24,12 +24,13 @@ Side Task(Refer to Syllabus for Requirements):
 6. Presentation
 
 Tiffany
-    1. Getting the primitive Data Ready to Use
+    1. Getting the primitive Data Ready to Use(data selection only)
     4. Road-map
-    5. Report
-    6. Presentation
+    5. Report(lead the making process)
+    6. Presentation(lead the making process)
 
 Jonathan/Kate
+    1. Data Preprocessing
     2. Building and Testing the model
     5. Report
     6. Presentation
