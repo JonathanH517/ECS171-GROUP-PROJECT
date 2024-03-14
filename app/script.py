@@ -76,12 +76,12 @@ def load_and_preprocess_data(filepath):
     # Split the dataset into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-    return X_train, y_train
+    return X_train, y_train, scaler
 
 # Assuming the filepath to your dataset is correctly provided
 
 
-X_train, y_train = load_and_preprocess_data('used_cars.csv')
+X_train, y_train, scaler = load_and_preprocess_data('used_cars.csv')
 # Now you define the parameter grid and perform the grid search
 param_grid = {'n_estimators': [100, 200, 500], 'max_features': [2, 3, 5, 8], "max_depth": [3, 5, 10, 12]}
 
@@ -98,3 +98,4 @@ RF_training_metrics_after_tuning(X_train, y_train, tuned_RF)
 
 # After training, save the model and scaler to disk
 joblib.dump(tuned_RF, 'tuned_RF.joblib')  # Save the tuned RandomForestRegressor\
+joblib.dump(scaler, 'scaler.joblib')  # Save the tuned RandomForestRegressor\
