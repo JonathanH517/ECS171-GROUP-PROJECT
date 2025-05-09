@@ -1,63 +1,65 @@
 # 🚗 Car Price Prediction Using Machine Learning
 
-This project predicts the prices of used cars using regression techniques and outlier filtering based on a curated dataset. The model pipeline includes data preprocessing, outlier removal, scaling, and training on SVR and polynomial regression models.
+This project focuses on predicting used car prices through data cleaning, outlier detection, and training multiple regression models. The workflow is implemented using Python and popular machine learning libraries such as scikit-learn.
 
 ---
 
 ## 📌 Step-by-Step Summary
 
 1. **Library Import**  
-   - Imported libraries for data handling (`pandas`, `numpy`), visualization (`matplotlib`, `seaborn`, `plotly`), and machine learning (`sklearn`).
+   - Utilized `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`, and `sklearn`.
 
 2. **Data Loading**  
-   - Loaded `used_cars.csv`, filtered for the 15 most popular car brands.
+   - Loaded `used_cars.csv`. Focused on the top 15 most common car brands to ensure sample balance.
 
 3. **Feature Engineering & Cleaning**  
-   - Cleaned and extracted numeric values from `milage`, `model_year`, `price`, and `engine` fields.  
-   - Replaced missing `horse_power` with median values.
+   - Extracted and converted relevant fields: mileage, model year, price, and engine power (horsepower).  
+   - Missing horsepower values were imputed with the median.
 
 4. **Feature Selection**  
-   - Removed non-predictive or redundant columns such as `color`, `transmission`, `accident`, etc.
+   - Dropped columns like brand, transmission, fuel type, and accident history to focus on numerical predictors.
 
 5. **Data Visualization**  
-   - Used box plots and heatmaps to inspect distribution and correlations.
+   - Boxplots were used to visualize price distribution. Correlation heatmaps were used to inspect linear relationships.
 
 6. **Outlier Detection with OneClassSVM**  
-   - Applied `OneClassSVM` on scaled data (`milage` vs. `price`) to detect and remove outliers.
+   - Anomaly detection on scaled mileage vs. price using RBF-kernel `OneClassSVM`. Best `gamma` and `nu` parameters were selected based on lowest deviation from target outlier fraction.
 
 7. **Feature Scaling & Splitting**  
-   - Applied `MinMaxScaler` to numerical features and split the dataset into training and testing subsets.
+   - Applied `MinMaxScaler` to normalize all features. Split data into 80/20 train-test subsets.
 
-8. **Modeling**  
-   - Trained:
-     - **Support Vector Regression (SVR)** – RBF kernel, C=100
-     - **Polynomial Regression** – Feature expansion using `PolynomialFeatures` + Linear Regression  
-   - Evaluated using MAE, RMSE, and R².
+8. **Model Training**  
+   - Trained and evaluated the following models:
+
+---
+
+## 🧠 Models Used
+
+| Model                   | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| **Support Vector Regression (SVR)** | Used RBF kernel with C=100. Good for capturing non-linear trends.         |
+| **Polynomial Regression**           | Applied polynomial transformation and trained using Linear Regression.   |
+| **Random Forest Regressor**         | Ensemble method to handle feature interactions and reduce overfitting.   |
+
+Each model was evaluated using:
+- **Mean Absolute Error (MAE)**
+- **Root Mean Squared Error (RMSE)**
+- **R² Score**
 
 ---
 
 ## 📊 Features Used
-- Model Age (2024 - model year)
-- Mileage
-- Horsepower
+- Car Age (`2024 - model_year`)
+- Mileage (numeric miles)
+- Horsepower (extracted and imputed)
 - Price (target variable)
 
 ---
 
-## 🧠 Models Trained
-- **Support Vector Regression (SVR)**
-  - Kernel: RBF
-  - C = 100
-- **Polynomial Regression**
-  - Degree configurable
-  - Linear model trained on polynomially transformed features
-
----
-
 ## 📈 Evaluation Metrics
-- Mean Absolute Error (MAE)
-- Root Mean Squared Error (RMSE)
-- R² Score
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+- R² (Coefficient of Determination)
 
 ---
 
