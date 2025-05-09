@@ -63,4 +63,10 @@ Each model was evaluated using:
 
 ---
 
-## 📂 File Structure
+## 🌐 Web App
+
+A lightweight **web interface** is included to make predictions interactively.
+
+### 🔧 Features:
+- Enter inputs: mileage, model year, horsepower
+- Get predicted price instantly
